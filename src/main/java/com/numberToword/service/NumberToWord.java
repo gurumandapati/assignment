@@ -1,8 +1,17 @@
 package com.numberToword.service;
 
-import static com.numberToword.constants.AppConstants.*;
-
+import static com.numberToword.constants.AppConstants.UP_TO_NUM_19;
+import static com.numberToword.constants.AppConstants.HUNDRED;
+import static com.numberToword.constants.AppConstants.AND;
+import static com.numberToword.constants.AppConstants.DENOM;
+import static com.numberToword.constants.AppConstants.TENS;
 import org.apache.log4j.Logger;
+
+
+/**
+ * This class contains the logic of convert the number to English
+ * 
+ */
 
 public class NumberToWord {
 	final static Logger logger = Logger.getLogger(NumberToWord.class);
