@@ -13,8 +13,8 @@ import org.apache.log4j.Logger;
  * 
  */
 
-public class NumberToWord {
-	final static Logger logger = Logger.getLogger(NumberToWord.class);
+public class NumberToWordConverter {
+	final static Logger logger = Logger.getLogger(NumberToWordConverter.class);
 	
 	/**
 	 * this method purpose is to convert the number to English word less than
@@ -90,7 +90,7 @@ public class NumberToWord {
 	 *
 	 * 
 	 */
-	public String numberToWord(int val) throws Exception {
+	public String numberToWordConvert(int val) throws Exception {
 		if (val < 100) {
 			return convertUpToHundred(val);
 		}
@@ -106,12 +106,12 @@ public class NumberToWord {
 				int r = val - (l * mod);
 				String ret = convertUpToThousand(l) + " " + DENOM[didx];
 				if (r > 0) {
-					ret = ret + " " + numberToWord(r);
+					ret = ret + " " + numberToWordConvert(r);
 				}
 				return ret;
 			}
 		}
-		throw new Exception("Should never get here, bottomed out in english_number");
+		throw new Exception("Should never get here, bottomed out in numberToWordConvert");
 		
 	}
 }

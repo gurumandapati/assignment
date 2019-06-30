@@ -3,7 +3,7 @@ package com.numberToword.application;
 import org.apache.log4j.Logger;
 
 import com.numberToword.exception.ValidationException;
-import com.numberToword.service.NumberToWord;
+import com.numberToword.service.NumberToWordConverter;
 
 public class RunApplication {
 	final static Logger logger = Logger.getLogger(RunApplication.class);
@@ -13,8 +13,8 @@ public class RunApplication {
 
 			int number = validateInput(args);
 
-			NumberToWord numberToWord = new NumberToWord();
-			System.out.println(number +"="+numberToWord.numberToWord(number));
+			NumberToWordConverter numberToWord = new NumberToWordConverter();
+			System.out.println(number +"="+numberToWord.numberToWordConvert(number));
 		} catch (ValidationException e) {
 			logger.error(" ERROR :: " + e.getMessage());
 		} catch (Exception e) {

@@ -1,3 +1,4 @@
+package com.numberToword.application.test;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
@@ -8,14 +9,14 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import com.numberToword.service.NumberToWord;
+import com.numberToword.service.NumberToWordConverter;
 
 @RunWith(Parameterized.class)
-public class NumberToWordTest {
+public class NumberToWordConverterTest {
 	private int input;
     private String expected;
     
-    public NumberToWordTest(int input, String expected) {
+    public NumberToWordConverterTest(int input, String expected) {
         this.input = input;
         this.expected = expected;
     }
@@ -29,11 +30,11 @@ public class NumberToWordTest {
 	    }
 	
 	@Test
-	public void test(){
+	public void testNumberToWordConverter(){
 		
-		NumberToWord test=new NumberToWord();
+		NumberToWordConverter test=new NumberToWordConverter();
 		try {
-	        assertEquals(test.numberToWord(input), expected);
+	        assertEquals(test.numberToWordConvert(input), expected);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
